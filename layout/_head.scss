@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mx;
+
+.head {
+  padding-block: 6rem 7rem;
+
+  h2 {
+    font-size: 2.7rem;
+    margin-block-end: 4rem;
+  }
+
+  .pay-option {
+    @include mx.flexCenter;
+    color: v.$lightGrayBlue;
+    margin: 0 auto;
+    
+    .toggle-container {
+      inline-size: 6.4rem;
+      block-size: 3.5rem;
+      background-image: v.$primaryGradient;
+      padding-inline: .5rem;
+      border-radius: 2rem;
+      margin-inline: 2.4rem;
+      cursor: pointer;
+      z-index: 1;
+      &:hover {
+        background-image: none;
+        background-color: v.$lightPurple;
+      }
+      
+      .toggle-node {
+        inline-size: 2.6rem;
+        block-size: 2.6rem;
+        background: #fefefe;
+        border-radius: 50%;
+      }
+    }
+  }
+}

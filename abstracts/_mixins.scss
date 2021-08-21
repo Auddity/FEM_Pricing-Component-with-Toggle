@@ -1,0 +1,37 @@
+@use './variables' as v;
+
+%flex {
+  display: flex;
+}
+%alignCenter {
+  align-items: center;
+}
+
+@mixin flexCenter {
+  @extend %flex, %alignCenter;
+  justify-content: center;
+}
+
+@mixin flexStart {
+  @extend %flex, %alignCenter;
+  justify-content: flex-start;
+}
+
+@mixin flexEnd {
+  @extend %flex, %alignCenter;
+  justify-content: flex-end;
+}
+
+@mixin mq($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@function setTextColor($color) {
+  @if(lightness($color) > 70) {
+    @return v.$darkGrayBlue;
+  } @else {
+    @return v.$veryLightGrayBlue;
+  }
+}

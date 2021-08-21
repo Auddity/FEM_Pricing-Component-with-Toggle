@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.min.css">
+  <title>Frontend Mentor | Pricing Component with Toggle</title>
+</head>
+<body>
+  <div class="container">
+    <div class="head">
+      <h2>Our Pricing</h2>
+      <div class="pay-option">
+        <p>Annually</p>
+        <div class="toggle-container" id="toggle-btn">
+          <div class="toggle-node"></div>
+        </div>
+        <p>Monthly</p>
+      </div>
+    </div>
+
+    <div class="cards-container">
+      <div class="card">
+        <h4>Basic</h4>
+        <div class="amount-container">
+          <span class="dollar">$</span>
+          <span class="amount">
+            <!-- populated in JS -->
+          </span>
+        </div>
+        <P>500 GB Storage</P>
+        <P>2 Users Allowed</P>
+        <P>Send up to 3GB</P>
+        <button>Learn More</button>
+      </div>
+      <div class="card">
+        <h4>Professional</h4>
+        <div class="amount-container">
+          <span class="dollar">$</span>
+          <span class="amount">
+            <!-- populated in JS -->
+          </span>
+        </div>
+        <P>1 TB Storage</P>
+        <P>5 Users Allowed</P>
+        <P>Send up to 10GB</P>
+        <button>Learn More</button>
+      </div>
+      <div class="card">
+        <h4>Master</h4>
+        <div class="amount-container">
+          <span class="dollar">$</span>
+          <span class="amount">
+            <!-- populated in JS -->
+          </span>
+        </div>
+        <P>2 TB Storage</P>
+        <P>10 Users Allowed</P>
+        <P>Send up to 20GB</P>
+        <button>Learn More</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

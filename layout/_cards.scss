@@ -1,0 +1,99 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mx;
+
+.cards-container {
+  padding-block-end: 6rem;
+  @include mx.mq(813px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: #fefefe;
+    padding: 2.5rem;
+    border-radius: 1.2rem;
+    box-shadow: v.$boxShadowM;
+    @include mx.mq(813px) {
+      padding: 3rem 3rem;
+
+      &:first-child {
+        transform: translateX(-1.8rem);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 360rem;
+      }
+      &:last-child {
+        transform: translateX(1.8rem);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        width: 360rem;
+      }
+    }
+    &:nth-child(2) {
+      margin-block: 2.5rem;
+      background: v.$primaryGradient;
+      color: mx.setTextColor(v.$purple);
+      @include mx.mq(813px) {
+        transform: scale(1.1);
+        box-shadow: v.$boxShadowD;
+        min-width: 36rem;
+      }
+
+      button {
+        background: #fefefe;
+        color: mx.setTextColor(#fefefe);
+        &:hover {
+          background: transparent;
+          color: mx.setTextColor(v.$purple);
+          border: 1px solid #fefefe;
+        }
+      }
+    }
+
+    .amount-container {
+      font-size: 7rem;
+      margin-block: 2.5rem 3rem;
+      @include mx.flexCenter;
+
+      .dollar {
+        font-size: 4rem;
+        padding-inline-end: .5rem;
+      }
+
+      .amount {
+        border: none;
+      }
+    }
+
+    p {      
+      padding-block: 2rem;
+      border-top: 1px solid v.$lightGrayBlue;   
+      
+      &:last-of-type {
+        border-bottom: 1px solid v.$lightGrayBlue;
+      }
+    }
+
+    button {
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      background: v.$primaryGradient;
+      color: mx.setTextColor(v.$purple);
+      padding-block: 1.5rem;
+      margin-block: 3rem 1rem;
+      border-radius: 1rem;
+      font-family: inherit;
+      font-weight: inherit;
+      border: 1px solid #fefefe;
+
+      &:hover {
+        background: transparent;
+        color: v.$purple;
+        border: 1px solid v.$purple;
+      }
+    }
+  }
+}
