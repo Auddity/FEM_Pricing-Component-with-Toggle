@@ -16,19 +16,19 @@
     border-radius: 1.2rem;
     box-shadow: v.$boxShadowM;
     @include mx.mq(813px) {
-      padding: 3rem 3rem;
+      padding: 3rem;
 
       &:first-child {
         transform: translateX(-1.8rem);
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        width: 360rem;
+        min-width: 39rem;
       }
       &:last-child {
         transform: translateX(1.8rem);
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-        width: 360rem;
+        min-width: 39rem;
       }
     }
     &:nth-child(2) {

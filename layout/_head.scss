@@ -5,14 +5,14 @@
   padding-block: 6rem 7rem;
 
   h2 {
-    font-size: 2.7rem;
+    font-size: 2.9rem;
     margin-block-end: 4rem;
   }
 
   .pay-option {
     @include mx.flexCenter;
     color: v.$lightGrayBlue;
-    margin: 0 auto;
+    margin-inline: auto;
     
     .toggle-container {
       inline-size: 6.4rem;
